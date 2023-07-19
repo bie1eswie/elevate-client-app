@@ -16,8 +16,7 @@ export class SessionManagerService {
       if (item && item !== 'undefined') {
           return JSON.parse(this.storage.getItem(key));
       }
-
-      return;
+      return '';
   }
 
   public store(key: string, value: any) {
