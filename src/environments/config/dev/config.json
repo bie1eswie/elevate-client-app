@@ -1,6 +1,6 @@
 {
     "$schema": "../../../environments/config/config.schema.json",
-    "apiBaseURL": "https://localhost:7180",
+    "apiBaseURL": "https://elevate-assesment-api.azurewebsites.net",
     "appInsightsKey": "211f0722-a9f3-4c1c-b45f-123206a0dfbe",
     "logging": {
         "errorLogTo": [
