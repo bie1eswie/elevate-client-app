@@ -9,5 +9,12 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://cdn.humanapi.co/humanapi-connect-client@2.0.1.js"></script>
+  <script>
+    // Add an event listener for each lifecycle hook
+    HumanConnect.on("close", (response) => {console.log("Connect closed", response)});
+    HumanConnect.on("connect", (response) => {console.log("Source connected", response)});
+    HumanConnect.on("disconnect", (response) => {console.log("Source disconnected", response)});
+  </script>
 </body>
 </html>

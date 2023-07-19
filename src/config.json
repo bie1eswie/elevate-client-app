@@ -1,0 +1,11 @@
+{
+    "$schema": "./environments/config/config.schema.json",
+    "apiBaseURL": "https://localhost:7180",
+    "appInsightsKey": "211f0722-a9f3-4c1c-b45f-4f5206a0dfbe",
+    "logging": {
+        "errorLogTo": [
+            "console"
+        ],
+        "loggingLevel": "info"
+    }
+}

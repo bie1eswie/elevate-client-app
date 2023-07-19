@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "apiBaseURL": "https://localhost:44386",
+      "appInsightsKey": "211f0722-a9f3-4c1c-b45f-123206a0dfbe",
+      "logging": {
+        "errorLogTo": [
+          "console",
+          "appInsights"
+        ],
+        "loggingLevel": "info"
+      }
+    }
+  ],
+  "required": [
+    "apiBaseURL",
+    "appInsightsKey",
+    "logging"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "apiBaseURL": {
+      "$id": "#/properties/apiBaseURL",
+      "type": "string",
+      "title": "The apiBaseURL schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://localhost:44386"
+      ]
+    },
+    "appInsightsKey": {
+      "$id": "#/properties/appInsightsKey",
+      "type": "string",
+      "title": "The appInsightsKey schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "211f0722-a9f3-4c1c-b45f-123206a0dfbe"
+      ]
+    },
+    "logging": {
+      "$id": "#/properties/logging",
+      "type": "object",
+      "title": "The logging schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "errorLogTo": [
+            "console",
+            "appInsights"
+          ],
+          "loggingLevel": "info"
+        }
+      ],
+      "required": [
+        "errorLogTo",
+        "loggingLevel"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "errorLogTo": {
+          "$id": "#/properties/logging/properties/errorLogTo",
+          "type": "array",
+          "title": "The errorLogTo schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              "console",
+              "appInsights"
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "anyOf": [
+              {
+                "$id": "#/properties/logging/properties/errorLogTo/items/anyOf/0",
+                "type": "string",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "console",
+                  "appInsights"
+                ]
+              }
+            ],
+            "$id": "#/properties/logging/properties/errorLogTo/items"
+          }
+        },
+        "loggingLevel": {
+          "$id": "#/properties/logging/properties/loggingLevel",
+          "type": "string",
+          "title": "The loggingLevel schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "info"
+          ]
+        }
+      }
+    }
+  }
+}
