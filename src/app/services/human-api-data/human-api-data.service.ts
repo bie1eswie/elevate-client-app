@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AbstractEndpoints } from 'src/environments/endpoints/endpoints.abstract';
 import { IHeartRateReading } from 'src/app/models/data/heart-rate-reading';
+import { IActivitySummary } from 'src/app/models/data/activity-summary';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,9 @@ export class HumanApiDataService implements AbstractServiceHumanApiData {
 
   constructor(private http: HttpClient,
               private endpoints: AbstractEndpoints) { }
+   getActivitySummary(accessToken: string): Observable<IActivitySummary[]> {
+    return this.http.get<IActivitySummary[]>(this.endpoints.humanApiData.getActivitySummary(accessToken))
+  }
 
   getVitalsData(accessToken: string,vitalName: string): Observable<IHeartRateReading[]> {
     return this.http.get<IHeartRateReading[]>(this.endpoints.humanApiData.getVitalsData(accessToken,vitalName))

@@ -19,6 +19,9 @@ export class EndpointsMock implements AbstractEndpoints {
     humanApiData: IHumanAPIDataEndpoints = {
       getVitalsData: (accessToken: string, vitalName: string): string => {
         return `${this.config.apiBaseURL}/api/HumanAPI/GetVitalsData?email=${accessToken}`
+      },
+      getActivitySummary: (accessToken: string): string => {
+        return `${this.config.apiBaseURL}/GetActivitySummary?accessToken=${accessToken}`;
       }
      };
 }

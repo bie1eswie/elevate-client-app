@@ -18,4 +18,5 @@ export interface IHumanAPIEndpoints {
 
 export interface IHumanAPIDataEndpoints {
   getVitalsData(email: string,vitalName: string): string;
+  getActivitySummary(accessToken: string): string;
 }
