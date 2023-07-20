@@ -1,0 +1,28 @@
+.loading-screen-wrapper {
+    z-index: 100000;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100%;
+   
+}
+
+.loading-screen-spinner {
+    position: absolute;
+    top: 50%;
+    border-radius:50%;
+    left: 50%;
+    box-shadow: 0px 0px 10px #05DEB7;
+    transform: translate(-20%, -20%);
+}
+.mat-spinner-color::ng-deep circle{
+    filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.039)) drop-shadow(0px 10.5px 36px rgba(0, 0, 0, 0.19));
+    stroke: #05DEB7;
+}
+p{
+    position: absolute;
+    color:#fff;
+    z-index:10000;
+    top:60%;
+    left:46%;
+}

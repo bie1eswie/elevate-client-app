@@ -22,6 +22,7 @@ import { AbstractHumanAPIService } from './services/human-api/human.api.service.
 import { FactoryServiceHumanAPI } from './services/human-api/human.api.service.factory';
 import { AbstractServiceHumanApiData } from './services/human-api-data/human-api-data.service.abstract';
 import { FactoryServiceHumanAPIData } from './services/human-api-data/human-api-data.service.factory';
+import { InterceptorLoadingScreen } from './interceptors/loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { FactoryServiceHumanAPIData } from './services/human-api-data/human-api-
         // APP INITIALIZER
         { provide: APP_INITIALIZER, useFactory: FactoryServiceConfig, deps: [ServiceConfig, Router], multi: true },
         // HTTP INTERCEPTORS
+        { provide: HTTP_INTERCEPTORS, useClass: InterceptorLoadingScreen, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: InterceptorError, multi: true, deps: [ServiceMonitoring] },
         { provide: HTTP_INTERCEPTORS,useClass: AuthInterceptor,multi: true, deps: [ApiService, ServiceMonitoring]},
         { provide: AbstractEndpoints, useFactory: FactoryEndpoints, deps: [ServiceConfig, ServiceMonitoring] },

@@ -5,13 +5,15 @@ import { NavigationComponent } from "./components/navigation/navigation.componen
 import { LayoutComponent } from "./components/layout/layout.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
+import { LoadingScreenComponent } from "./components/loading-screen/loading-screen.component";
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoadingScreenComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { RouterModule } from "@angular/router";
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoadingScreenComponent
   ],
   providers: []
 })

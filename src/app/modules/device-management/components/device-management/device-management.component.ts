@@ -29,16 +29,14 @@ export class DeviceManagementComponent implements OnInit, OnDestroy {
 
     let email = this.sessionManager.retrieve(Enums.SessionVariables.UserEmail);
     this.token = this.sessionManager.retrieve(Enums.SessionVariables.AccessToken);
-    if(this.token ===''){
-      this.humanAPIService.getAccessToken(email).subscribe(result =>{
-        this.token = result;
-        this.sessionManager.store(Enums.SessionVariables.AccessToken,result);
-      });
-    }
-    setTimeout(() => {
-      const event = document.createEvent('Event');
-      event.initEvent('load', true, true);
-      window.dispatchEvent(event);
-    }, 0);
+    this.humanAPIService.getAccessToken(email).subscribe(result =>{
+      this.token = result;
+      this.sessionManager.store(Enums.SessionVariables.AccessToken,result);
+              setTimeout(() => {
+          const event = document.createEvent('Event');
+          event.initEvent('load', true, true);
+          window.dispatchEvent(event);
+        }, 0);
+    });
   }
 }
