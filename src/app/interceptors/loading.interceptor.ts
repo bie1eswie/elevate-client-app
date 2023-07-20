@@ -9,10 +9,6 @@ import { ServiceLoadingScreen } from '../services/loading-screen.service/loading
 export class InterceptorLoadingScreen implements HttpInterceptor {
 
     activeRequests = 0;
-
-    /**
-     * URLs for which the loading screen should not be enabled
-     */
     skipUrls = [
         '/authrefresh',
     ];
