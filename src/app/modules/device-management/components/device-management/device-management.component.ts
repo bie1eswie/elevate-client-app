@@ -5,6 +5,7 @@ import { AccountService } from 'src/app/modules/account/services/account.service
 import { AbstractHumanAPIService } from 'src/app/services/human-api/human.api.service.abstract';
 import { SessionManagerService } from 'src/app/services/session-manager/session-manager.service';
 declare function HumanApiConnect(entityNumber: any, publicToken: any): any;
+
 @Component({
   selector: 'app-device-management',
   templateUrl: './device-management.component.html',
@@ -15,7 +16,6 @@ export class DeviceManagementComponent implements OnInit, OnDestroy {
   token = '';
   connectClosed = false;
   currentUser!: IUser;
-  HumanConnect: any;
   constructor(private humanAPIService: AbstractHumanAPIService,
               private accountService: AccountService,
               private sessionManager: SessionManagerService){
@@ -41,6 +41,7 @@ export class DeviceManagementComponent implements OnInit, OnDestroy {
         }, 0);
     });
   }
+
   ConnectHumanApi() {
     HumanApiConnect(Enums.SessionVariables.UserEmail, this.token);
   }
