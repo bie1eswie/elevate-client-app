@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <script src='https://connect.humanapi.co/connect.js'></script>
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline' 'unsafe-dynamic' data: filesystem: about: blob: ws: wss: https://hapi-connect.humanapi.co">
   <title>ElevateClientApp</title>
   <base href="/">
@@ -11,12 +11,5 @@
 </head>
 <body>
   <app-root></app-root>
-  <script src="https://cdn.humanapi.co/humanapi-connect-client@2.0.1.js"></script>
-  <script>
-    // Add an event listener for each lifecycle hook
-    HumanConnect.on("close", (response) => {console.log("Connect closed", response)});
-    HumanConnect.on("connect", (response) => {console.log("Source connected", response)});
-    HumanConnect.on("disconnect", (response) => {console.log("Source disconnected", response)});
-  </script>
 </body>
 </html>
