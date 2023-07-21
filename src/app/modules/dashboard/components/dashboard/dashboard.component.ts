@@ -43,4 +43,10 @@ export class DashboardComponent implements OnInit {
       this.activitySummary = result;
     });
   }
+  resyncData(){
+    const email = this.sessionManager.retrieve(Enums.SessionVariables.UserEmail);
+    this.humanApiData.resyncData(email).subscribe(result=>{
+      this.getActivitySummary();
+    })
+  }
 }

@@ -13,6 +13,10 @@ export class HumanApiDataService implements AbstractServiceHumanApiData {
 
   constructor(private http: HttpClient,
               private endpoints: AbstractEndpoints) { }
+
+  resyncData(email: string): Observable<string> {
+    return this.http.get(this.endpoints.humanApiData.resyncData(email),{responseType: 'text'})
+  }
    getActivitySummary(accessToken: string): Observable<IActivitySummary[]> {
     return this.http.get<IActivitySummary[]>(this.endpoints.humanApiData.getActivitySummary(accessToken))
   }

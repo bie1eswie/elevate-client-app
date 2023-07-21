@@ -14,6 +14,10 @@ export class HumanApiDataServiceMock implements AbstractServiceHumanApiData {
   constructor(private http: HttpClient,
     private endpoints: AbstractEndpoints) { }
 
+    resyncData(email: string): Observable<string> {
+      return this.http.get(this.endpoints.humanApiData.resyncData(email),{responseType: 'text'})
+    }
+
     getVitalsData(accessToken: string, vitalsName: string): Observable<IHeartRateReading[]> {
       return this.http.get<IHeartRateReading[]>(this.endpoints.humanApiData.getVitalsData(accessToken, vitalsName))
     }

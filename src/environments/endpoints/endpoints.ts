@@ -23,6 +23,9 @@ export class Endpoints implements AbstractEndpoints {
       },
       getActivitySummary: (accessToken: string): string => {
         return `${this.config.apiBaseURL}/GetActivitySummary?accessToken=${accessToken}`;
+      },
+      resyncData: (email: string): string => {
+        return `${this.config.apiBaseURL}/ResyncData?email=${email}`;
       }
     };
 }
