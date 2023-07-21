@@ -29,6 +29,7 @@ export class AccountService {
    this.authenticationService.login(values).subscribe((user)=>{
       this.appDataService.store(Enums.SessionVariables.AuthorizationData,user.token);
       this.appDataService.store(Enums.SessionVariables.UserEmail,user.email);
+      this.appDataService.store(Enums.SessionVariables.AccessToken,user.publicToken);
       this.currUserStore.next(user);
       this.gotToDeviceManagement();
     })

@@ -7,6 +7,11 @@
               <li class="nav-item"><a class="nav-link active" aria-current="page" [routerLink]="['/device-management']" routerLinkActive="active">Device Management</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a></li>
           </ul>
+          <div class="d-flex">
+            <button (click)="checkoutClick()" class="btn btn-outline-dark" type="submit">
+              Sign Out
+            </button>
+          </div>
       </div>
   </div>
 </nav>

@@ -19,11 +19,9 @@ export class Endpoints implements AbstractEndpoints {
     };
     humanApiData: IHumanAPIDataEndpoints = {
       getVitalsData: (accessToken: string, vitalName: string): string => {
-        accessToken = 'demo';
         return `${this.config.apiBaseURL}/GetVitalsData?accessToken=${accessToken}&vitalName=${vitalName}`;
       },
       getActivitySummary: (accessToken: string): string => {
-        accessToken = 'demo';
         return `${this.config.apiBaseURL}/GetActivitySummary?accessToken=${accessToken}`;
       }
     };

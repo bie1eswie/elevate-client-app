@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     this.user = {
       email: '',
       password: '',
-      token: ''
+      token: '',
+      publicToken:''
     }
   }
 
