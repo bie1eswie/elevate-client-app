@@ -1,15 +1,8 @@
 {
   "$schema": "./environments/config/config.schema.json",
-  "apiBaseURL": "http://localhost:3000",
+  "apiBaseURL": "https://localhost:7180",
   "appInsightsKey": "211f0722-a9f3-4c1c-b45f-4f5206a0dfbe",
-  "authentication": {
-      "clientId": "d1a39f3f-1b49-489b-ac88-8f102a8561c8",
-      "authority": "https://arenalogin.b2clogin.com/arenalogin.onmicrosoft.com/B2C_1_Sign_In_And_Sign_Up",
-      "validateAuthority": false,
-      "redirectUri": "http://localhost:4200/oid-redirect",
-      "postLogoutRedirectUri": "http://localhost:4200",
-      "navigateToLoginRequestUrl": true
-  },
+  "humanAPIClientId": "5726f93bd107d6ad899e272c48702f1767d60330",
   "logging": {
       "errorLogTo": [
           "console"

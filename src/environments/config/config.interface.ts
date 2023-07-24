@@ -6,6 +6,7 @@ export function InitializeConfig(): IConfig {
     const config: IConfig = {
         apiBaseURL: '',
         appInsightsKey: '',
+        humanAPIClientId: '',
         logging: {
             errorLogTo: ['console', 'appInsights'],
             loggingLevel: Enums.ErrorSeverityLevel.Error
@@ -18,6 +19,7 @@ export interface IConfig {
     apiBaseURL: string;
     appInsightsKey: string;
     logging: ILogging;
+    humanAPIClientId: string;
 }
 
 export interface ILogging {

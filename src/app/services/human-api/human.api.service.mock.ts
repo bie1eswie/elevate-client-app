@@ -12,6 +12,9 @@ export class HumanApiServiceMock implements AbstractHumanAPIService {
 
   constructor(private http: HttpClient,
               private endpoints: AbstractEndpoints) { }
+  saveAccessToken(sessionTokenObject: any): Observable<string> {
+    throw new Error('Method not implemented.');
+  }
 
   getAccessToken(email: string): Observable<string> {
     return this.http.get<string>(this.endpoints.humanApi.getAccessToken(email))

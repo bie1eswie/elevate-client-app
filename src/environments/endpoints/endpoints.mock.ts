@@ -8,9 +8,12 @@ export class EndpointsMock implements AbstractEndpoints {
 
   humanApi: IHumanAPIEndpoints = {
     getAccessToken: (email: string): string => {
-      return `${this.config.apiBaseURL}/api/HumanAPI/GetAccessToken?email=${email}`
+      return `${this.config.apiBaseURL}/api/HumanAPI/GetAccessToken?email=${email}`;
+    },
+    saveAccessToken: function (): string {
+      throw new Error('Function not implemented.');
     }
-   };
+  };
     authorization: IAuthorizationEndpoints = {
       registrationAPI : '/api/account/register',
       loginAPI :'/api/account/login',

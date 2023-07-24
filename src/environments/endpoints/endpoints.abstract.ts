@@ -14,6 +14,7 @@ export interface IAuthorizationEndpoints {
 
 export interface IHumanAPIEndpoints {
   getAccessToken(email: string): string;
+  saveAccessToken(): string;
 }
 
 export interface IHumanAPIDataEndpoints {

@@ -19,6 +19,7 @@ export class ServiceConfig implements IConfig {
   appInsightsKey!: string;
   redirectUrl!: string;
   logging!: ILogging;
+  humanAPIClientId!: string;
 
   constructor(private readonly httpHandler: HttpBackend) {
     this.http = new HttpClient(httpHandler);

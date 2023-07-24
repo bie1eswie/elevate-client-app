@@ -38,8 +38,8 @@ export class DashboardComponent implements OnInit {
     })
   }
   getActivitySummary(){
-    const token = this.sessionManager.retrieve(Enums.SessionVariables.AccessToken);
-    this.humanApiData.getActivitySummary(token).subscribe(result=>{
+    const email = this.sessionManager.retrieve(Enums.SessionVariables.UserEmail);
+    this.humanApiData.getActivitySummary(email).subscribe(result=>{
       this.activitySummary = result;
     });
   }

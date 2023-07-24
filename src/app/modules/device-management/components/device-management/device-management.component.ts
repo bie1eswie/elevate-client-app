@@ -4,7 +4,7 @@ import { IUser } from 'src/app/models/users/user';
 import { AccountService } from 'src/app/modules/account/services/account.service';
 import { AbstractHumanAPIService } from 'src/app/services/human-api/human.api.service.abstract';
 import { SessionManagerService } from 'src/app/services/session-manager/session-manager.service';
-declare function HumanApiConnect(entityNumber: any, publicToken: any): any;
+import { DeviceComponentService } from '../../service/device-component.service';
 
 @Component({
   selector: 'app-device-management',
@@ -18,7 +18,8 @@ export class DeviceManagementComponent implements OnInit, OnDestroy {
   currentUser!: IUser;
   constructor(private humanAPIService: AbstractHumanAPIService,
               private accountService: AccountService,
-              private sessionManager: SessionManagerService){
+              private sessionManager: SessionManagerService,
+              private deviceComponentService: DeviceComponentService){
 
   }
   ngOnDestroy(): void {
@@ -44,9 +45,7 @@ export class DeviceManagementComponent implements OnInit, OnDestroy {
       });
     }
   }
-
-  ConnectHumanApi() {
-    let email = this.sessionManager.retrieve(Enums.SessionVariables.UserEmail);
-    HumanApiConnect(email, this.token);
+  ConnectHumanApi(){
+    this.deviceComponentService.ConnectHumanApi(this.token);
   }
 }

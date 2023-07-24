@@ -8,9 +8,12 @@ export class Endpoints implements AbstractEndpoints {
 
     humanApi: IHumanAPIEndpoints = {
       getAccessToken: (email: string): string => {
-        return `${this.config.apiBaseURL}/api/HumanAPI/GetAccessToken?email=${email}`
+        return `${this.config.apiBaseURL}/api/HumanAPI/GetAccessToken?email=${email}`;
+      },
+      saveAccessToken: (): string => {
+        return `${this.config.apiBaseURL}/api/HumanAPI/GetUserAccessToken`;
       }
-     };
+    };
 
     authorization: IAuthorizationEndpoints = {
        registrationAPI : `${this.config.apiBaseURL}/api/Account/register`,
