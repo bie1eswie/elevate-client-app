@@ -33,6 +33,7 @@ export class ServiceConfig implements IConfig {
       .then((config: IConfig) => {
         this.apiBaseURL = config.apiBaseURL;
         this.appInsightsKey = config.appInsightsKey;
+        this.humanAPIClientId = config.humanAPIClientId;
         switch (config.logging.loggingLevel) {
           case 'info':
             this.logging.loggingLevel = Enums.ErrorSeverityLevel.Info;

@@ -22,7 +22,8 @@
   "required": [
     "apiBaseURL",
     "appInsightsKey",
-    "logging"
+    "logging",
+    "humanAPIClientId"
   ],
   "additionalProperties": true,
   "properties": {
@@ -40,6 +41,16 @@
       "$id": "#/properties/appInsightsKey",
       "type": "string",
       "title": "The appInsightsKey schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "211f0722-a9f3-4c1c-b45f-123206a0dfbe"
+      ]
+    },
+    "humanAPIClientId": {
+      "$id": "#/properties/humanAPIClientId",
+      "type": "string",
+      "title": "The humanAPIClientId schema",
       "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
