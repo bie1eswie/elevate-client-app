@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
     this.accountService.currentUser$.subscribe(result=>{
       this.currentUser = result;
     })
-    this.getHeartRateData();
+    //this.getHeartRateData();
     this.getActivitySummary();
   }
   getHeartRateData(){

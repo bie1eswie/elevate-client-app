@@ -4,40 +4,9 @@
       Resync Data
     </button>
   </div>
-  <div class="col-6">
+  <div class="col-8">
     <div class="container">
-      <div class="card m-5 p-3">
-        <h2 class="card-header">Heart Rate Reading</h2>
-          <div class="card-body">
-              <table class="table table-bordered table-striped table-hover">
-                  <thead>
-                  <tr>
-                      <th>Timestamp</th>
-                      <th>TzOffset</th>
-                      <th>Reading value</th>
-                      <th>Unit of measure</th>
-                      <th>Data source</th>
-                      <th>Created at</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr *ngFor="let record of data">
-                      <td>{{ record.timestamp }}</td>
-                      <td>{{ record.tzOffset }}</td>
-                      <td>{{ record.value }}</td>
-                      <td>{{ record.unit }}</td>
-                      <td>{{ record.source }}</td>
-                      <td>{{ record.createdAt }}</td>
-                  </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-  </div>
-  <div class="col-6">
-    <div class="container">
-      <div class="card m-5 p-3">
+      <div class="card m-2 p-3">
         <h2 class="card-header">Activity Summary</h2>
           <div class="card-body">
               <table class="table table-bordered table-striped table-hover">
