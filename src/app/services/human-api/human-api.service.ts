@@ -10,7 +10,7 @@ export class HumanApiService implements AbstractHumanAPIService {
 
   constructor(private http: HttpClient,
               private endpoints: AbstractEndpoints) { }
- saveAccessToken(sessionTokenObject: any): Observable<string> {
+ saveAccessToken(sessionTokenObject: any): Observable<any> {
   return this.http.post<string>(this.endpoints.humanApi.saveAccessToken(),sessionTokenObject);
   }
 

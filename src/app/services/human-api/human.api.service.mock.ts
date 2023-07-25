@@ -12,7 +12,7 @@ export class HumanApiServiceMock implements AbstractHumanAPIService {
 
   constructor(private http: HttpClient,
               private endpoints: AbstractEndpoints) { }
-  saveAccessToken(sessionTokenObject: any): Observable<string> {
+  saveAccessToken(sessionTokenObject: any): Observable<any> {
     throw new Error('Method not implemented.');
   }
 
