@@ -6,6 +6,9 @@ import { LayoutComponent } from "./components/layout/layout.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { LoadingScreenComponent } from "./components/loading-screen/loading-screen.component";
+import { SideNavComponent } from "./components/side-nav/side-nav.component";
+import { MainLayoutComponent } from "./components/main-layout/main-layout.component";
+import { SidebarPanelComponent } from "./components/sidebar-panel/sidebar-panel.component";
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { LoadingScreenComponent } from "./components/loading-screen/loading-scre
     HeaderComponent,
     NavigationComponent,
     LayoutComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    SideNavComponent,
+    MainLayoutComponent,
+    SidebarPanelComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +30,10 @@ import { LoadingScreenComponent } from "./components/loading-screen/loading-scre
     HeaderComponent,
     NavigationComponent,
     LayoutComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    SideNavComponent,
+    MainLayoutComponent,
+    SidebarPanelComponent
   ],
   providers: []
 })

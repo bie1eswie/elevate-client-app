@@ -1,36 +1,3 @@
-<div class="p5 m-5 row">
-  <div class="d-flex">
-    <button (click)="resyncData()" class="btn btn-outline-dark" type="submit">
-      Resync Data
-    </button>
-  </div>
-  <div class="col-8">
-    <div class="container">
-      <div class="card m-2 p-3">
-        <h2 class="card-header">Activity Summary</h2>
-          <div class="card-body">
-              <table class="table table-bordered table-striped table-hover">
-                  <thead>
-                  <tr>
-                      <th>Date</th>
-                      <th>Duration</th>
-                      <th>Distance</th>
-                      <th>Steps</th>
-                      <th>Data source</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr *ngFor="let record of activitySummary">
-                      <td>{{ record.date }}</td>
-                      <td>{{ record.duration }}</td>
-                      <td>{{ record.distance }}</td>
-                      <td>{{ record.steps }}</td>
-                      <td>{{ record.source }}</td>
-                  </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-  </div>
+<div class="wrapper wrapper-content">
+
 </div>

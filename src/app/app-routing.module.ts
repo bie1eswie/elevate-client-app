@@ -4,6 +4,7 @@ import { AccountLayoutComponent } from './modules/account/components/account-lay
 import { Enums } from './enums/enums';
 import { LayoutComponent } from './modules/shared/components/layout/layout.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MainLayoutComponent } from './modules/shared/components/main-layout/main-layout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: Enums.NavigationRoutesForRouter.Account, pathMatch: 'full' },
@@ -14,9 +15,8 @@ const routes: Routes = [
     ]
   },
   {
-    path:'',component: LayoutComponent, canActivate: [AuthGuard],
+    path:'',component: MainLayoutComponent, /*canActivate: [AuthGuard],*/
     children: [
-      { path: Enums.NavigationRoutesForRouter.DeviceManagement, loadChildren: () => import('./modules/device-management/device.management.module').then(m => m.DeviceManagementModule)},
       { path: Enums.NavigationRoutesForRouter.Dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
     ]
   }

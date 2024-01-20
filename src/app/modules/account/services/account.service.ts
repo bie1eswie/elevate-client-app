@@ -26,13 +26,14 @@ export class AccountService {
 
   login(values: any) {
     this.appDataService.store(Enums.SessionVariables.AuthorizationData,'');
-   this.authenticationService.login(values).subscribe((user)=>{
+/*   this.authenticationService.login(values).subscribe((user)=>{
       this.appDataService.store(Enums.SessionVariables.AuthorizationData,user.token);
       this.appDataService.store(Enums.SessionVariables.UserEmail,user.email);
       this.appDataService.store(Enums.SessionVariables.AccessToken,user.publicToken);
       this.currUserStore.next(user);
       this.gotToDeviceManagement();
-    })
+    })*/
+    this.gotToDeviceManagement();
   }
 
   register(values: RegisterDTO){
@@ -48,6 +49,6 @@ export class AccountService {
     return this.authenticationService.checkUserExists(email);
   }
   gotToDeviceManagement(){
-    this.router.navigate(['/device-management']);
+    this.router.navigate(['/dashboard']);
   }
 }
